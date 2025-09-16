@@ -36,8 +36,8 @@ def get_top_tracks(artist_id, access_token, market='US'):
 def main():
     print("Autenticación en Spotify")
     print(f"print para saber tu client debes crear una app en https://developer.spotify.com/dashboard")
-    client_id = input("Client ID: ")
-    client_secret = input("Client Secret : ")
+    client_id = input("Client ID: 7d5bfc37b91a4c2da76cda4c0656e15d")
+    client_secret = input("Client Secret :cf90208191214a4881628c0e081a78f7 ")
     artist_name = input("Nombre del artista que querés buscar : ")
     market = input(" Código del mercado (ej: AR, US, MX) [US]: ") or "US"
 

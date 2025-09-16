@@ -38,8 +38,8 @@ def main():
     print(f"print para saber tu client debes crear una app en https://developer.spotify.com/dashboard")
     client_id = input("Client ID: ")
     client_secret = input("Client Secret : ")
-    artist_name = input("🎤 Nombre del artista que querés buscar : ")
-    market = input("🌎 Código del mercado (ej: AR, US, MX) [US]: ") or "US"
+    artist_name = input("Nombre del artista que querés buscar : ")
+    market = input(" Código del mercado (ej: AR, US, MX) [US]: ") or "US"
 
     try:
         token = get_access_token(client_id, client_secret)
@@ -52,10 +52,10 @@ def main():
         top_tracks = get_top_tracks(artist_id, token, market)
 
         if not top_tracks:
-            print(f"🎧 El artista no tiene canciones populares en el mercado '{market}'.")
+            print(f" El artista no tiene canciones populares en el mercado '{market}'.")
             return
 
-        print(f"\n🎵 Top Tracks de {artist_name} en {market.upper()}:")
+        print(f"\n Top Tracks de {artist_name} en {market.upper()}:")
         for i, track in enumerate(top_tracks, 1):
             print(f"{i}. {track['name']} - {track['external_urls']['spotify']}")
     except requests.exceptions.RequestException as e:
